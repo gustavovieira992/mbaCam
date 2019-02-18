@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      MBACam
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button expand="block" (click)="openCamera()">Câmera</ion-button>
+  <ion-button expand="block" (click)="openGallery()">Galeria</ion-button>
+
+  <!-- <div *ngIf="imagesGallery.length">
+    <ion-card *ngFor="let image of imagesGallery">
+
+    </ion-card>
+  </div> -->
+
+  <ion-grid *ngIf="imagesGallery.length">
+    <ion-row>
+      <ion-col size="4" *ngFor="let image of imagesGallery">
+        <ion-img [src]="image" style="width:100px;height:100px"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
